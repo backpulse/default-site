@@ -2,12 +2,19 @@ import React from 'react';
 
 import client from 'services/client';
 
+import './styles.scss';
+
 class About extends React.Component {
     
     constructor(props) {
         super(props);
         this.state = {
-            
+            name: "",
+            descriptions: [
+                {
+                    content: ""
+                }
+            ]
         }
     }
 
@@ -27,7 +34,15 @@ class About extends React.Component {
     render() {
         return (
             <div className="page about">
-            about
+                <div className="about-content">
+                    <h1>{this.state.name}</h1>
+                    {this.state.descriptions[0].content.split('\n').map((block, i) => {
+                        return (
+                            <p key={i}>{block}</p>
+                        )
+                    })
+                    }
+                </div>
             </div>
         )
     }

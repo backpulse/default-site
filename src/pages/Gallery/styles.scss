@@ -1,0 +1,12 @@
+.page.gallery {
+    .photos-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        .photo-box {
+            padding-top: 10px;
+        }
+    }
+}

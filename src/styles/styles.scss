@@ -2,9 +2,22 @@ body, html, #root,.app,.app-container {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
 }
 a {
     text-decoration: none!important;
     color: rgba(0, 0, 0, 0.87)!important;
+}
+
+.page {
+    padding-top: 15px;
+    padding-bottom: 25px;
+
+    h1 {
+        font-size: 3em;
+        font-weight: 300;
+        line-height: 48px;
+        margin: 30px 0;
+    }
 }

@@ -1,0 +1,21 @@
+.page.contact {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 90vh;
+    padding: 0px;
+    .contact-content {
+        width: 33%;
+        margin: 0 auto;
+
+        h1 {
+            text-align: center;
+        }
+        p {
+            font-weight: 300;
+            margin: 0;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+    }
+}

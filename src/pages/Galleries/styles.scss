@@ -1,0 +1,12 @@
+.page.galleries {
+    .galleries-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        .gallery-box {
+            padding-top: 10px;
+        }
+    }
+}

@@ -12,12 +12,15 @@ import Galleries from 'pages/Galleries';
 import Contact from 'pages/Contact';
 import About from 'pages/About';
 
+import Menu from 'components/Menu';
+
 class App extends React.Component {
 	render() {
 		return (
 			<div className="app-container">
 				<Router>
 					<div className="app">
+						<Menu/>
 						<Route exact path="/" component={Home}/>
 						<Route exact path="/galleries" component={Galleries}/>
 						<Route exact path="/gallery/:id" component={Gallery}/>

@@ -2,6 +2,12 @@ import React from 'react';
 
 import client from 'services/client';
 
+import GalleryBox from 'components/GalleryBox';
+
+import './styles.scss';
+
+import strings from 'strings';
+
 class Galleries extends React.Component {
     
     constructor(props) {
@@ -13,7 +19,7 @@ class Galleries extends React.Component {
 
     fetchGalleries = () => {
         client.get('/galleries').then(response => {
-            const galleries = response.data.payload;
+            const galleries = response.data.payload || [];
             this.setState({galleries});
         }).then(err => {
             if(err) throw err;
@@ -27,6 +33,14 @@ class Galleries extends React.Component {
     render() {
         return (
             <div className="page galleries">
+                <div className="galleries-container">
+                    <h1>
+                        {strings.MENU_GALLERIES}
+                    </h1>
+                    {this.state.galleries.map((gallery, i) => (
+                        <GalleryBox gallery={gallery} key={i}/>
+                    ))}
+                </div>
             </div>
         )
     }
