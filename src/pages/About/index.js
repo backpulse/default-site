@@ -4,6 +4,8 @@ import client from 'services/client';
 
 import './styles.scss';
 
+import {getContent} from 'utils';
+
 class About extends React.Component {
     
     constructor(props) {
@@ -36,7 +38,7 @@ class About extends React.Component {
             <div className="page about">
                 <div className="about-content">
                     <h1>{this.state.name}</h1>
-                    {this.state.descriptions[0].content.split('\n').map((block, i) => {
+                    {getContent(this.state.descriptions).split('\n').map((block, i) => {
                         return (
                             <p key={i}>{block}</p>
                         )
